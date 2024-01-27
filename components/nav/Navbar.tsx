@@ -6,6 +6,7 @@ import UserMenu from "./UserMenu";
 import getCurrentUser from "@/src/actions/getCurrentUser";
 import Categories from "./Categories";
 import Searchbar from "../Searchbar";
+import { Suspense } from "react";
 
 const redressed = Redressed({ subsets: ["latin"], weight: ["400"] });
 
@@ -23,7 +24,9 @@ const Navbar = async () => {
               E-Shop
             </Link>
             <div className="hidden md:block">
-              <Searchbar />
+              <Suspense>
+                <Searchbar />
+              </Suspense>
             </div>
             <div className="flex items-center gap-8 md:gap-12">
               <CartCount />
