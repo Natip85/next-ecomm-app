@@ -13,14 +13,11 @@ export default async function getProducts(params: IProductParams) {
     if (!searchTerm) {
       searchString = "";
     }
-
     let query: any = {};
 
     if (category) {
       query.category = category;
     }
-
-    console.log("QUERY>>>>>", query, searchTerm);
 
     const products = await prisma.product.findMany({
       where: {
