@@ -24,9 +24,7 @@ const Navbar = async () => {
               E-Shop
             </Link>
             <div className="hidden md:block">
-              <Suspense>
-                <Searchbar />
-              </Suspense>
+              <Searchbar />
             </div>
             <div className="flex items-center gap-8 md:gap-12">
               <CartCount />
@@ -35,7 +33,9 @@ const Navbar = async () => {
           </div>
         </Container>
       </div>
-      <Categories />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Categories />
+      </Suspense>
     </div>
   );
 };
