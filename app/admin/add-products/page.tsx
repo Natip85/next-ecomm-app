@@ -1,6 +1,6 @@
 import Container from "@/src/components/Container";
 import FormWrap from "@/src/components/FormWrap";
-import AddProductForm from "./AddProductForm";
+import AddProductForm from "../../../components/admin/AddProductForm";
 import getCurrentUser from "@/src/actions/getCurrentUser";
 import NullData from "@/src/components/NullData";
 

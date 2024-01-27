@@ -1,6 +1,6 @@
 "use client";
 
-import { ImageType } from "@/src/app/admin/add-products/AddProductForm";
+import { ImageType } from "@/src/components/admin/AddProductForm";
 import { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
 interface SelectImageProps {
